@@ -33,8 +33,7 @@
 
 **Abstract Data Type**
 
-> An abstract data type is a data type that is defined by programmer and not built into the language.  
-> An abstract data type is essentially a grouping of related information that is denoted with a type. It was a way to organize data in a meaningful way.
+> An abstract data type is a data type that is defined by programmer and not built into the language. An abstract data type is essentially a grouping of related information that is denoted with a type. It was a way to organize data in a meaningful way.
 
 The goal of object-oriented design is to:
 
@@ -44,7 +43,7 @@ The goal of object-oriented design is to:
 
 Advantages of object-oriented design
 
-    The system will mimic the structure of the problem
+> The system will mimic the structure of the problem
 
 Popular object-oriented languages:
 
@@ -62,15 +61,11 @@ There are many systems that still use the older languages and design paradigms.
 
 **Abstraction**
 
-    Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context.
-    Abstraction allows you to better understand a concept by breaking it down into a simplified description that
-    ignores unimportant details.
+> Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
 
 **Rule of Least Astonishment**
 
-    The abstraction captures the essential attributes and behaviour for a concept with no surprises and no definitions
-    that fall beyond its scope. You don't want to surprise anyone trying to understand your abstraction with irrelevant
-    characteristics.
+> The abstraction captures the essential attributes and behaviour for a concept with no surprises and no definitions that fall beyond its scope. You don't want to surprise anyone trying to understand your abstraction with irrelevant characteristics.
 
 **Examples of abstraction of a student**
 
@@ -94,7 +89,7 @@ These are the ***responsibilities***
 
 Abstractions are formed within a specific context for perspective and have to be carefully decided what is relevant. If the purpose of the system or the problem changes, abstractions can be updated accordingly.<br>
 
-    Abstractions are not a fixed creation, but are a direct result of the problem for which created them.
+> Abstractions are not a fixed creation, but are a direct result of the problem for which created them.
 
 ***Questions***
 
@@ -116,8 +111,7 @@ Abstractions are formed within a specific context for perspective and have to be
 
 **Encapsulation**
 
-    Encapsulation forms a self-contained object by bundling the data, and functions it requires to work, exposes an interface whereby
-    other objects can access and use it, and restricts access to certain inside details.
+> Encapsulation forms a self-contained object by bundling the data, and functions it requires to work, exposes an interface whereby other objects can access and use it, and restricts access to certain inside details.
 
 Encapsulation involves 3 ideas:
 
@@ -157,16 +151,11 @@ Why encapsulation?
 9. Black box thinking
 10. Abstraction barrier  
 
-
 ## **1.2.5 Decomposition**
 
 **Decomposition**
 
-    Decomposition is taking a whole thing and dividing it up into different parts. Or, on the flip side,
-    taking a bunch of separate parts with different functionalities and combining them together to form 
-    a whole. Decomposition allows you to further break down problems into pieces that are easier to
-    understand and solve.
-
+> Decomposition is taking a whole thing and dividing it up into different parts. Or, on the flip side, taking a bunch of separate parts with different functionalities and combining them together to form a whole. Decomposition allows you to further break down problems into pieces that are easier to understand and solve.
 
 ***Questions***
 
@@ -187,7 +176,6 @@ Why encapsulation?
     * Closely-related lifetime: car frame, engine *(when the engine goes, so does the car)*
     * No closely-related lifetime: wheels *(can be replaced many times over the course of a car's life)*
 
-
 ***Glossaries***
 
 1. Fixed number
@@ -196,20 +184,16 @@ Why encapsulation?
 4. Lifetime
 5. Sharing
 
-
 ## **1.2.6 Generalisation**
-<br>
 
-**Generalisation**<br>
+**Generalisation**
 
-    Generalisation is frequently used when designing algorithms, which are meant to be used to perform the same action on different sets of data.
-    We can generalise the actions into its own method, and simply pass it through a different set of data through arguments.
+> Generalisation is frequently used when designing algorithms, which are meant to be used to perform the same action on different sets of data. We can generalise the actions into its own method, and simply pass it through a different set of data through arguments.
 
 When a ***child class*** inherits from a ***parent class***, the child class will have the attributes and behaviours of the parent class.
 Common attributes and behaviours are placed in parent class.
 
-    In standard terminology, a parent class is known as a superclass and a child class is called the subclass
-
+> In standard terminology, a parent class is known as a superclass and a child class is called the subclass
 
 ***Question***
 
@@ -236,40 +220,21 @@ Common attributes and behaviours are placed in parent class.
 ---
 
 ## **1.2.7 Abstraction in Java and UML**
-<br>
 
-**Abstraction**<br>
+**Abstraction**
 
-    Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context.
-    Abstraction allows you to better understand a concept by breaking it down into a simplified description that
-    ignores unimportant details.
-<br>
-
+> Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
 
 ## **1.2.8 Encapsulation in Java and UML**
-<br>
 
 
-<ins>***Glossaries***</ins>
+***Glossaries***
+
 1. UML Diagrams
 2. asd
-<br>
-<br>
 
 ## **1.2.9 Decomposition in Java and UML**
-<br>
-
-<br>
-<br>
 
 ## **1.2.10 Generalisation with Inheritance in Java and UML**
-<br>
-
-<br>
-<br>
 
 ## **1.2.11 Generalisation with Interfaces in Java and UML**
-<br>
-
-<br>
-<br>
