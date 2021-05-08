@@ -27,11 +27,11 @@
 11. C *(programming language)*
 12. Modula-2 *(programming language)*
 
-**Imperative Paradigm**
+***Imperative Paradigm***
 
 > COBOL and Fortran followed an imperative paradigm which broke up large programs into smaller programms called subroutines, which are like methods in Java.
 
-**Abstract Data Type**
+***Abstract Data Type***
 
 > An abstract data type is a data type that is defined by programmer and not built into the language. An abstract data type is essentially a grouping of related information that is denoted with a type. It was a way to organize data in a meaningful way.
 
@@ -59,15 +59,15 @@ There are many systems that still use the older languages and design paradigms.
 
 ## **1.2.3 Abstraction**
 
-**Abstraction**
+***Abstraction***
 
 > Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
 
-**Rule of Least Astonishment**
+***Rule of Least Astonishment***
 
 > The abstraction captures the essential attributes and behaviour for a concept with no surprises and no definitions that fall beyond its scope. You don't want to surprise anyone trying to understand your abstraction with irrelevant characteristics.
 
-**Examples of abstraction of a student**
+***Examples of abstraction of a student***
 
 Some of the essential characteristics of a student:
 
@@ -109,7 +109,7 @@ Abstractions are formed within a specific context for perspective and have to be
 
 ## **1.2.4 Encapsulation**
 
-**Encapsulation**
+***Encapsulation***
 
 > Encapsulation forms a self-contained object by bundling the data, and functions it requires to work, exposes an interface whereby other objects can access and use it, and restricts access to certain inside details.
 
@@ -153,7 +153,7 @@ Why encapsulation?
 
 ## **1.2.5 Decomposition**
 
-**Decomposition**
+***Decomposition***
 
 > Decomposition is taking a whole thing and dividing it up into different parts. Or, on the flip side, taking a bunch of separate parts with different functionalities and combining them together to form a whole. Decomposition allows you to further break down problems into pieces that are easier to understand and solve.
 
@@ -224,6 +224,74 @@ Common attributes and behaviours are placed in parent class.
 **Abstraction**
 
 > Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
+
+Example of ***CRC card*** and ***class diagram*** representation of **`food class`**
+
+***Example 1***
+Converting class diagram into Java code
+
+```
+CRC card
+.------------------------------------.
+| Food                               |   <--- class name
+'-----------------------.------------'
+| Know grocery ID       |            |
+| Know name             |            |
+| Know manufacturer     |            |
+| Know expiry date      |            |
+| Know price            |            |
+| Check if on sale      |            |
+'------------------------------------'
+        ^                      ^
+  Responsibility         Collaborator
+  
+
+Class diagram
+.---------------------------.
+| Food                      |   <--- class name
+'---------------------------'          the same as class name in Java class
+| groceryID: String         |
+| name: String              |
+| manufacturer: String      |   <--- properties
+| expiryDate: Date          |          equivalent to member variables 
+| price: double             |          in Java class and define the
+'---------------------------'          attributes of the abstraction
+| isOnSale(): boolean       |   <--- operations
+'---------------------------'          equivalent to the methods in
+                                       Java class and define the behaviour
+                                       of the abstraction
+```
+
+The equivalent Java code
+
+```java
+// class name turns into class
+public class Food {
+    // properties turn into member variables
+    public String groceryID;
+    public String name;
+    public String manufacturer;
+    public Date expiryDate;
+    public double price;
+
+    // operation turns into method
+    public boolean isOnSale
+    () {
+
+    }
+}
+```
+
+
+> CRC card does not show clear separation between ***properties*** and ***operations***. See how both are combined in ***responsibility*** section, which may sometimes cause ambiguity.
+
+***Glossaries***
+
+1. UML Diagrams
+2. UML Class Diagram (Class Diagram)
+3. Abstraction
+4. CRC
+
 
 ## **1.2.8 Encapsulation in Java and UML**
 
