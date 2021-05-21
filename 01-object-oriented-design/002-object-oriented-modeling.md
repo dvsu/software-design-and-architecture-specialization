@@ -87,7 +87,7 @@ For a ***student***, those behaviours would be:
 
 These are the ***responsibilities***  
 
-Abstractions are formed within a specific context for perspective and have to be carefully decided what is relevant. If the purpose of the system or the problem changes, abstractions can be updated accordingly.<br>
+Abstractions are formed within a specific context for perspective and have to be carefully decided what is relevant. If the purpose of the system or the problem changes, abstractions can be updated accordingly.  
 
 > Abstractions are not a fixed creation, but are a direct result of the problem for which created them.
 
@@ -186,7 +186,7 @@ Why encapsulation?
 
 ## **1.2.6 Generalisation**
 
-**Generalisation**
+***Generalisation***
 
 > Generalisation is frequently used when designing algorithms, which are meant to be used to perform the same action on different sets of data. We can generalise the actions into its own method, and simply pass it through a different set of data through arguments.
 
@@ -221,16 +221,12 @@ Common attributes and behaviours are placed in parent class.
 
 ## **1.2.7 Abstraction in Java and UML**
 
-**Abstraction**
-
-> Abstraction is the idea of simplifying a concept in the problem domain to its essntials within some context. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
-
 Example of ***CRC card*** and ***class diagram*** representation of **`food class`**
 
-***Example 1***
+***Example 1***  
 Converting class diagram into Java code
 
-```
+```none
 CRC card
 .------------------------------------.
 | Food                               |   <--- class name
@@ -282,8 +278,43 @@ public class Food {
 }
 ```
 
+***Example 2***  
+Converting Java code into class diagram
 
-> CRC card does not show clear separation between ***properties*** and ***operations***. See how both are combined in ***responsibility*** section, which may sometimes cause ambiguity.
+```java
+public class ClickCounter {
+    private int count;
+
+    public ClickCounter() {
+        count = 0;
+    }
+
+    public void click() {
+        count++;
+    }
+    public void setClickCount(int ClickCount) {
+        count = clickCount;
+    }
+
+    public int getClickCount() {
+        return count;
+    }
+}
+```
+
+```none
+.--------------------------------------.
+| ClickCounter                         |
+'--------------------------------------'
+| count: int                           |
+'--------------------------------------'
+| click(): void                        |
+| setClickCount(clickCount: int): void |
+| getClickCount(): int                 |
+'--------------------------------------' 
+```
+
+> CRC card does not show clear separation between ***properties*** and ***operations***. See how both are combined in ***responsibility*** section, which may sometimes cause ambiguity. ***Class diagram*** represents code better.
 
 ***Glossaries***
 
@@ -292,16 +323,107 @@ public class Food {
 3. Abstraction
 4. CRC
 
-
 ## **1.2.8 Encapsulation in Java and UML**
 
+Ideas of encapsulation:
 
-***Glossaries***
+1. Bundle data and functions that manipulate the data, into a self-contained object
+2. Expose certain data and functions of that object, which can be accessed from other objects
+3. Restrict access to certain data and functions to only within that object
 
-1. UML Diagrams
-2. asd
+Example of encapsulation of Student class using UML Class diagram.  
+***+*** sign indicates that a method or attribute is public.  
+***-*** sign indicates that a method or attribute is private.
+
+```none
+.--------------------------------------.
+| Student                              |
+'--------------------------------------'
+| -gpa: float                          |
+| -degreeProgram: String               |
+'--------------------------------------'
+| +getGPA(): float                     |
+| +setGPA( float ): void               |
+| +getDegreeProgram(): String          |
+| +setDegreeProgram( String ): void    |
+'--------------------------------------' 
+```
+
+UML diagram that displays proper encapsulation for a `Driver` class  
+(The attributes are hidden, but there are methods exposed to make changes)
+
+```none
+.--------------------------------------.
+| Driver                               |
+'--------------------------------------'
+| -licenseID: String                   |
+| -car: Car                            |
+'--------------------------------------'
+| +getLicenseID(): String              |
+| +setLicenseID( float ): void         |
+| +getCar(): Car                       |
+| +setCar( Car ): void                 |
+'--------------------------------------' 
+```
+
+***Getter Methods***
+
+> Getter methods are methods that retrieve data, and their names typically begin with get and end with the name of the attribute whose value you will be returning.
+>
+> Getters often retrieve a private piece of data
+
+***Setter Methods***
+
+> Setter methods change data, and their names typically begin with set and end with the name of the variable you wish to set.
+>
+> Setters are used to set a private attribute in a safe way.
+
+Java code example  
+
+```java
+public class Student {
+    private float gpa;
+    private String degreeProgram;
+
+    public float getGPA() {
+        return gpa;
+    }
+
+    public void setGPA(float newGPA) {
+        gpa = newGPA;
+    }
+
+    public String getDegreeProgram() {
+        return degreeProgram;
+    }
+
+    public void setDegreeProgram( String newDegreeProgram ) {
+        degreeProgram = newDegreeProgram;
+    }
+}
+```
 
 ## **1.2.9 Decomposition in Java and UML**
+
+***Decomposition***
+
+> Taking a **whole** thing and dividing it up into different **parts**. Or, on the flip side, taking a bunch of separate parts with different functionalities and combining them together to form a whole. Decomposition allows you to further break down problems into pieces that are easier to understand and solve.
+
+There are three types of relationships found in decomposition:
+
+* Association
+* Aggregation
+* Composition
+
+***Association***
+
+> Association is "some" relationship. This means that there is a loose relationship between two objects. These objects may interact with each other for some time.
+
+Object pairs that best describe an association
+
+* Kitten - Yarn
+* Student - Sport
+* Food - Wine
 
 ## **1.2.10 Generalisation with Inheritance in Java and UML**
 
