@@ -519,6 +519,25 @@ If inheritance does not suit your need, consider whether decomposition is more a
 
 ## 1.3.6 UML Sequence Diagram
 
+Example of sequence diagram of fast food restaurant  
+
+![Sequence diagram of burger order](./assets/003/sequence_diagram_fast_food_restaurant.PNG)
+
+***Sequence diagram***
+
+> A sequence diagram describes how objects in your system interact to complete a specific task.
+
+How to create a sequence diagram:  
+
+1. Use a box to represent role play by an object. The role is typically labeled by the name of the class for the object.
+![Sequence diagram: role](./assets/003/sequence_diagram_role.PNG)
+2. Use vertical dotted lines, known as lifelines, to represent an object as time passes by.
+![Sequence diagram: lifeline](./assets/003/sequence_diagram_lifeline.PNG)
+3. Use arrows to show messages that are sent from one object to another.
+![Sequence diagram: message](./assets/003/sequence_diagram_message.PNG)
+
+Example of sequence diagram: changing a channel on television using remote control
+
 
 
 ## 1.3.7 UML State Diagram
