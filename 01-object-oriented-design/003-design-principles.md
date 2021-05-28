@@ -533,12 +533,30 @@ How to create a sequence diagram:
 ![Sequence diagram: role](./assets/003/sequence_diagram_role.PNG)
 2. Use vertical dotted lines, known as lifelines, to represent an object as time passes by.
 ![Sequence diagram: lifeline](./assets/003/sequence_diagram_lifeline.PNG)
-3. Use arrows to show messages that are sent from one object to another.
+3. Use arrows to show messages that are sent from one object to another.  Sending message is drawn as solid line arrow from the sender to the receiver. Returning data is drawn as a dotted line arrow.
 ![Sequence diagram: message](./assets/003/sequence_diagram_message.PNG)
+![Sequence diagram: returning data](./assets/003/sequence_diagram_returning_data.PNG)
+
+***Notes***
+
+> * A sequence diagram can contain other sequence diagrams within it.
+> ![Nested sequence diagrams](./assets/003/nested_sequence_diagrams.PNG)
+> * Draw sequence diagram from left to right
+> * When an object is activated, denote this on sequence diagram using small rectangles on the objects lifeline
 
 Example of sequence diagram: changing a channel on television using remote control
 
+![Sequence diagram of changing TV channel](./assets/003/sequence_diagram_change_tv_channel.PNG)
 
+Objects that are important in this example:
+
+1. TV viewer
+2. Remote
+3. Televison
+
+If looping occurs, for example, if the viewer keeps changing channel until it shows the desired channel, the diagram will look like this.  
+
+![Sequence diagram of changing TV channel (looping)](./assets/003/sequence_diagram_change_tv_channel_looping.PNG)
 
 ## 1.3.7 UML State Diagram
 
