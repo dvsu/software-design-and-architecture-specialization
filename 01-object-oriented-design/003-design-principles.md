@@ -136,7 +136,7 @@ What can you say about the coupling of `LawnSprinkler`\`s `sprinkle` method?
 
 ## 1.3.2 Separation of Concerns
 
-One goal of software design priciples si to help create a system that is
+One goal of software design priciples is to help create a system that is
 
 * flexible
 * reusable
@@ -560,7 +560,117 @@ If looping occurs, for example, if the viewer keeps changing channel until it sh
 
 ## 1.3.7 UML State Diagram
 
+***UML state diagram***
+
+> A state diagram is a technique that you can use to describe how your system behaves and responds.
+
+***State diagrams***
+
+> State diagrams can describe a single object and illustrate how that object behaves in response to a series of events in your system.
+
+***State***
+
+> A state is the way an object exists at a particular point in time. The state of an object is determined by the values of its attributes.
+
+***State diagram in details***
+
+1. Each state diagram has a filled circle to indicate the starting state
+
+2. A state consists of:
+    * State name *(the name should be meaningful for the states of object)*  
+    * State variables *(data relevant to the state of an object)*  
+    * Activities *(actions that are performed when in a certain state)*  
+    ![State diagram](./assets/003/state_diagram_the_state.PNG)
+3. There are 3 types of activities for each state:
+    * Entry  
+    * Exit  
+    * Do  
+    ![Activities of state diagram](./assets/003/state_diagram_activities.PNG)
+
+4. Termination represents an object being destroyed or the process being completed; drawn as a circle with a filled circle inside.  
+    ![State diagram: termination](./assets/003/state_diagram_termination.PNG)
+
+***Entry activities***
+
+> Entry activities are actions that occur when the state is just entered from another state.
+
+***Exit activities***
+
+> Exit activities are actions that occur when the state is exited and moves on to another state.
+
+***Do activities***
+
+> Do activities are actions that occur once, or multiple times while the object is in a certain state.
+
+***Examples***
+
+1. Traditional alarm clock with bell
+    * *Entry activity:* When a clock enters the ringing state (release a spring to ring a bell)
+    * *Exit activity:* When the clock leaves the ringing state, it will relock the spring
+    * *Do activity:* When the clock is in its ringing state, the clock continuously rings the bell
+    ![Activities of an alarm clock](./assets/003/state_diagram_alarm_clock_with_bell.PNG)
+
+2. State diagram of a vending machine
+    ![State diagram of a vending machine](./assets/003/state_diagram_vending_machine.PNG)
+
+***Questions***
+
+1. What kind of states could an egg have?  
+    > Examples such as raw, hard-boiled, fried, spiled. All of these could be represented with a state diagram, and there may be activities and attributes associated with each state!  
+
+2. How would `course` state of `full` be expressed in a state diagram?  
+    ![State diagram: full course](./assets/003/state_diagram_full_course.PNG)
+
+3. What is the purpose of a state diagram?  
+    `[  ]` To show how different classes interact with each other in a system.  
+    `[  ]` To show how data is manipulated and transferred within a system.  
+    `[✓]` To show how a system or object behaves in reaction to events.  
+    `[  ]` To show the different classes in a system.  
+
+Notes:
+
+* State diagrams are useful for describing the behavior of a system or of a single object.
+* State diagrams can also help yo find issues in the system
+
 ## Model Checking
 
 ---
+
 ## 1.3.8 Model Checking
+
+***Questions***
+
+1. What step of software development would model checking most likely be done?  
+    `[  ]` During planning  
+    `[  ]` Before planning  
+    `[  ]` After deployment  
+    `[✓]` Before deployment *(model checking is done after code has been written and before deployment to find any errors in the behavior of the software before it is released)*  
+
+2. Why is the modelling phase very important in model checking?  
+    The model description is written during the modelling phase. Model checking is only effective when the model description is complete and well thought out. Any issues in the model description may cause the model checker to misinterpret the system is behavior.  
+
+Model checking checks the behavior in the state model of the system and notifies if there is any violation to the rules. A rule that the software is required to satisfy must not produce a ***deadlock***.  
+
+***Deadlock***
+
+> A deadlock is a situation where your system cannot continue because two tasks are waiting for the same resource.  
+
+Model checker generates a state model from code.  
+
+***State model***
+
+> A state model is an abstract state machine that can be in one of various states. The model checker then checks that the state model conforms to certain behavioral properties.
+
+There are 3 different phases to performing model checking:
+
+1. The modeling phase *(such as sanity check using simple logic)*
+2. The running phase *(running the model checker to see how the model conforms to the desired properties written in modeling phase)*
+3. The analysis phase *(checking desired properties are satisfied and any violations/ **counterexamples**)*
+
+## Quiz
+
+Three examples of inheritance used poorly
+
+* A subclass inherits methods from the superclass and adds extra, new, unrelated functionality *(if the subclass inherits some behaviors and adds unrelated functionality, it is not very coherent. Decomposing responsibilities into different interfaces should be considered)*
+* A method in the superclass is overwritten with different behavior by a subclass *(this violates Liskov's substitution principle, which states that a superclass should be able to be substituted by a subclass without error)*  
+* Inheritance is used to share behavior without specializing *(if inheritance is merely used to share behavior and not much more, sonsider skipping it altogether and just using the superclass)*  
